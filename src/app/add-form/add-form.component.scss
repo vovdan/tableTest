@@ -1,0 +1,13 @@
+.payment-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+    
+    &__field{
+        min-width: 300px;
+        padding: 10px;
+        border: 2px solid gray; 
+        max-height: 6px;
+    }
+}

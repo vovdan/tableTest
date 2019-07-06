@@ -1,25 +1,3 @@
-.payment-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 800px;
-    
-    &__field{
-        min-width: 300px;
-        padding: 10px;
-        border: 2px solid gray; 
-        max-height: 6px;
-    }
-}
-mat-header-cell{
-    border: 2px solid gray;
-}
-
-.table{
-    margin-top: 20px;
-    border: 2px solid gray;
-    width: 100%;
-}
 .sumCost{
     margin-top: 20px;
 }

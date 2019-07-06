@@ -1,4 +1,5 @@
 export interface Payment {
     name: string,
-    cost: string
+    cost: string,
+    months: number[]
 }
