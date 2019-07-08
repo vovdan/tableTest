@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Payment } from 'src/models/payment';
 
+
 @Component({
   selector: 'app-add-form',
   templateUrl: './add-form.component.html',
@@ -8,11 +9,11 @@ import { Payment } from 'src/models/payment';
 })
 export class AddFormComponent implements OnInit {
   public payment: Payment = { name: '', cost: '', months:[] };
+  
 
   @Output()
   public submit:EventEmitter<Payment>=new EventEmitter();
   constructor() { }
-
   ngOnInit() {
   }
 
