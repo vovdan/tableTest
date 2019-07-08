@@ -26,7 +26,7 @@ export class TableComponent implements OnInit {
 
   @Output()
   public dataChange: EventEmitter<Payment[]> = new EventEmitter();
-  
+
   @ViewChild('table', { static: false })
   public table: MatTable<Payment>;
 
@@ -49,8 +49,8 @@ export class TableComponent implements OnInit {
     this.dataChange.emit(this.dataSource.data);
   }
 
-  deleteRow(item) {
-    const index = this.dataSource.data.indexOf(item.id);
+  deleteRow(row) {
+    const index = this.dataSource.data.findIndex(item => item === row)
     this.dataSource.data.splice(index, 1);
     if (this.table) {
       this.table.renderRows();

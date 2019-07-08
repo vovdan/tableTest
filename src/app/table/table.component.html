@@ -20,8 +20,8 @@
   
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef>Удалить</th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-icon-button (click)="deleteRow(1)">
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="deleteRow(row)">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <i class="material-icons">highlight_off</i>
         </button>
