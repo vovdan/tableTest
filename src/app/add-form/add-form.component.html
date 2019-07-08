@@ -1,11 +1,10 @@
-
 <div class="payment-form">
 
-    <input class="payment-form__field" name="name" placeholder="Наименование платежа" [(ngModel)]="payment.name" required
-      autofocus>
-    <input class="payment-form__field" name="cost" placeholder="Стоимость за день" [(ngModel)]="payment.cost" required
-      autofocus>
-    <button class="payment-form__submit" role="button" class="btn btn-primary btn-block" type="submit" (click)="submitOnClick()">Добавить</button>
-  
-  </div>
-  
+  <input class="payment-form__field" #name="ngModel" name="name" placeholder="Наименование платежа"
+    [(ngModel)]="payment.name" required autofocus>
+  <input class="payment-form__field" #cost='ngModel' name="cost" placeholder="Стоимость за день" [(ngModel)]="payment.cost" required
+    autofocus pattern="^[0-9]+">
+  <button class="payment-form__submit" [disabled]="name.invalid || cost.invalid"  role="button" class="btn btn-primary btn-block" type="submit"
+    (click)="submitOnClick()">Добавить</button>
+
+</div>
